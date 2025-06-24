@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Kevin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .biodata-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .biodata-table th,
+        .biodata-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .biodata-table th {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .biodata-table tr {
+            transition: all 0.3s ease;
+        }
+
+        .biodata-table tr:hover {
+            background-color: #f8f9ff;
+            transform: translateX(5px);
+        }
+
+        .biodata-table td:first-child {
+            font-weight: 600;
+            color: #555;
+            width: 35%;
+            background: linear-gradient(45deg, #f8f9ff, #fff);
+        }
+
+        .biodata-table td:last-child {
+            color: #333;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .biodata-table th,
+            .biodata-table td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <h1>Kevin Fajar Pratama</h1>
+            <p class="subtitle">Sistem Informasi | 2024240003</p>
+        </div>
+
+        <table class="biodata-table">
+            <thead>
+                <tr>
+                    <th>Informasi</th>
+                    <th>Detail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nama Lengkap</td>
+                    <td>Kevin Fajar Pratama</td>
+                </tr>
+                <tr>
+                    <td>Tempat, Tanggal Lahir</td>
+                    <td>Jakarta, 26 Desember 2004</td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>Laki-laki</td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>Jl. Waringin No. 16 Rt 004 Rw 001, Matraman , Jakarta Timur</td>
+                </tr>
+                <tr>
+                    <td>No. Telepon</td>
+                    <td>+62 896-9640-2927</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>kevinfajarpratama@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Agama</td>
+                    <td>Islam</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>Mahasiswa</td>
+                </tr>
+                <tr>
+                    <td>Hobi</td>
+                    <td>Bermain Game, Olahraga, Coding</td>
+                </tr>
+                <tr>
+                    <td>Umur</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Animasi untuk tabel rows
+        const tableRows = document.querySelectorAll('.biodata-table tbody tr');
+        
+        tableRows.forEach((row, index) => {
+            row.style.opacity = '0';
+            row.style.transform = 'translateX(-20px)';
+            
+            setTimeout(() => {
+                row.style.transition = 'all 0.5s ease';
+                row.style.opacity = '1';
+                row.style.transform = 'translateX(0)';
+            }, 100 * index);
+        });
+    </script>
+</body>
+</html>
